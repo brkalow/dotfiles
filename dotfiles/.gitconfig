@@ -1,0 +1,22 @@
+[push]
+	default = simple
+	autoSetupRemote = true
+[core]
+	excludesfile = ~/.gitignore
+[init]
+	defaultBranch = main
+[pull]
+	rebase = true
+[alias]
+	co = checkout
+	br = branch
+	ci = commit
+	st = status
+	unstage = reset HEAD --
+	last = log -1 HEAD
+	lg = log --oneline --graph --decorate --all
+[credential]
+	helper = osxkeychain
+[user]
+	name = brkalow
+	email = bryce@clerk.dev

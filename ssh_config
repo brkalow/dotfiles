@@ -1,0 +1,20 @@
+# Managed by dotfiles
+Host *
+    AddKeysToAgent yes
+    IdentitiesOnly yes
+    ServerAliveInterval 60
+    ServerAliveCountMax 3
+
+# GitHub
+Host github.com
+    HostName github.com
+    User git
+    IdentityFile ~/.ssh/id_ed25519
+
+# Example remote dev server (uncomment and customize)
+# Host devbox
+#     HostName your-server.example.com
+#     User your-username
+#     IdentityFile ~/.ssh/id_ed25519
+#     ForwardAgent yes
+
