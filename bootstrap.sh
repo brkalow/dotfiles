@@ -29,6 +29,7 @@ CASKS=(
     "karabiner-elements"
     "tuple"
     "tableplus"
+    "1password-cli"
 )
 
 FORMULAS=(
@@ -276,6 +277,14 @@ if command_exists bun; then
 else
     echo "Installing bun..."
     curl -fsSL https://bun.sh/install | bash
+fi
+
+# Install claude code
+if command_exists claude; then
+    log_success "claude code already installed"
+else
+    echo "Installing claude code..."
+    curl -fsSL https://claude.ai/install.sh | bash
 fi
 
 # Setup local CA with mkcert
