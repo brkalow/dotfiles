@@ -29,6 +29,7 @@ CASKS=(
     "karabiner-elements"
     "tuple"
     "tableplus"
+    "1password"
     "1password-cli"
 )
 
