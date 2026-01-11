@@ -81,20 +81,8 @@ eval "$(zoxide init zsh)"
 # === gh CLI completions ===
 eval "$(gh completion -s zsh)"
 
-# === fnm (Node Version Manager) - Lazy Loaded ===
-_fnm_load() {
-    unfunction _fnm_load fnm node npm npx pnpm pnpx yarn bun bunx 2>/dev/null
-    eval "$(command fnm env --use-on-cd --shell zsh)" >/dev/null
-}
-fnm() { _fnm_load; command fnm "$@" }
-node() { _fnm_load; command node "$@" }
-npm() { _fnm_load; command npm "$@" }
-npx() { _fnm_load; command npx "$@" }
-pnpm() { _fnm_load; command pnpm "$@" }
-pnpx() { _fnm_load; command pnpx "$@" }
-yarn() { _fnm_load; command yarn "$@" }
-bun() { _fnm_load; command bun "$@" }
-bunx() { _fnm_load; command bunx "$@" }
+# === fnm (Node Version Manager) ===
+eval "$(fnm env --use-on-cd --shell zsh)"
 
 # === bun completions ===
 [ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
